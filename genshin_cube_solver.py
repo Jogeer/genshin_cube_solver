@@ -52,7 +52,7 @@ class Field():
         #[cube.get_states() for cube in self._field]
         self._matrix_one_size = int(self.sqrt(len(self._field)))
 
-    def _def_states(self, userStateMatrix) -> list:
+    def _def_states(self, userStateMatrix:list) -> list:
         states = {'const':0, 'consth':1, 'dynamic':2, 'dynamich':3, 'nothing':4}
         return [states.get(el) for el in userStateMatrix]
 
